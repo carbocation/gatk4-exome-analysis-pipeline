@@ -28,14 +28,14 @@ version 1.0
 ## page at https://hub.docker.com/r/broadinstitute/genomes-in-the-cloud/ for detailed
 ## licensing information pertaining to the included programs.
 
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/UnmappedBamToAlignedBam.wdl" as ToBam
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/AggregatedBamQC.wdl" as AggregatedQC
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/GermlineVariantDiscovery.wdl" as Calling
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/Qc.wdl" as QC
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/Utilities.wdl" as Utils
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/BamToCram.wdl" as ToCram
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/tasks/VariantCalling.wdl" as ToGvcf
-import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0/structs/GermlineStructs.wdl"
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/UnmappedBamToAlignedBam.wdl" as ToBam
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/AggregatedBamQC.wdl" as AggregatedQC
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/GermlineVariantDiscovery.wdl" as Calling
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/Qc.wdl" as QC
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/Utilities.wdl" as Utils
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/BamToCram.wdl" as ToCram
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/tasks/VariantCalling.wdl" as ToGvcf
+import "https://raw.githubusercontent.com/carbocation/gatk4-exome-analysis-pipeline/1.1.0-jamesp/structs/GermlineStructs.wdl"
 
 # WORKFLOW DEFINITION
 workflow ExomeGermlineSingleSample {
