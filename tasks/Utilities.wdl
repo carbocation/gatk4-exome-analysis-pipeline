@@ -64,6 +64,7 @@ task CreateSequenceGroupingTSV {
     preemptible: preemptible_tries
     docker: "us.gcr.io/broad-gotc-prod/python:2.7"
     memory: "2 GiB"
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
   output {
     Array[Array[String]] sequence_grouping = read_tsv("sequence_grouping.txt")
@@ -112,6 +113,7 @@ task ScatterIntervalList {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "2 GiB"
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
 }
 
@@ -150,6 +152,7 @@ task ConvertToCram {
     memory: "3 GiB"
     cpu: "1"
     disks: "local-disk " + disk_size + " HDD"
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
   output {
     File output_cram = "~{output_basename}.cram"
@@ -181,6 +184,7 @@ task ConvertToBam {
     memory: "3 GiB"
     cpu: "1"
     disks: "local-disk 200 HDD"
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
   output {
     File output_bam = "~{output_basename}.bam"
@@ -204,5 +208,6 @@ task SumFloats {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/python:2.7"
     preemptible: preemptible_tries
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
 }

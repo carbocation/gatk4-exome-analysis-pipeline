@@ -182,5 +182,6 @@ task MergeBamouts {
     disks: "local-disk ~{disk_size} HDD"
     preemptible: 3
     cpu: 1
+    zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
 }
