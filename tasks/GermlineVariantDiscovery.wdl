@@ -163,7 +163,7 @@ task MergeVCFs {
       OUTPUT=~{output_vcf_name}
   }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: preemptible_tries
     memory: "3 GiB"
     disks: "local-disk ~{disk_size} HDD"

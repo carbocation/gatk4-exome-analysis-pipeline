@@ -40,7 +40,7 @@ task SortSam {
 
   }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     disks: "local-disk " + disk_size + " HDD"
     cpu: "1"
     memory: "5000 MiB"
@@ -137,7 +137,7 @@ task MarkDuplicates {
       ADD_PG_TAG_TO_READS=false
   }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: preemptible_tries
     memory: "~{memory_size} GiB"
     disks: "local-disk " + disk_size + " HDD"
@@ -368,7 +368,7 @@ task GatherSortedBamFiles {
       CREATE_MD5_FILE=true
     }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: preemptible_tries
     memory: "3 GiB"
     disks: "local-disk " + disk_size + " HDD"
@@ -404,7 +404,7 @@ task GatherUnsortedBamFiles {
       CREATE_MD5_FILE=false
     }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: preemptible_tries
     memory: "3 GiB"
     disks: "local-disk " + disk_size + " HDD"

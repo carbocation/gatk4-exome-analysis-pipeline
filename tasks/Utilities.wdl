@@ -111,7 +111,7 @@ task ScatterIntervalList {
     Int interval_count = read_int(stdout())
   }
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     memory: "2 GiB"
     zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
@@ -147,7 +147,7 @@ task ConvertToCram {
     samtools index ~{output_basename}.cram
   >>>
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: preemptible_tries
     memory: "3 GiB"
     cpu: "1"
@@ -179,7 +179,7 @@ task ConvertToBam {
     samtools index ~{output_basename}.bam
   >>>
   runtime {
-    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
+    docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     preemptible: 3
     memory: "3 GiB"
     cpu: "1"
