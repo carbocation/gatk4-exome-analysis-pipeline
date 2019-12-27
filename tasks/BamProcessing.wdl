@@ -43,7 +43,7 @@ task SortSam {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.3-check-fingerprint-hotfix-1574283728"
     disks: "local-disk " + disk_size + " HDD"
     cpu: "1"
-    memory: "5000 MiB"
+    memory: "10000 MiB"
     preemptible: preemptible_tries
     zones: "us-west1-a us-west1-b us-west1-c us-east1-b us-east1-c us-east1-d us-central1-a us-central1-b us-central1-c us-central1-f"
   }
