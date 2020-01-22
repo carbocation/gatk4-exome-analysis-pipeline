@@ -483,8 +483,8 @@ task CollectHsMetrics {
   Float ref_size = size(ref_fasta, "GiB") + size(ref_fasta_index, "GiB")
   Int disk_size = ceil(size(input_bam, "GiB") + ref_size) + 20
   # Try to fit the input bam into memory, within reason.
-  Int rounded_bam_size = ceil(size(input_bam, "GiB") + 0.5 + 5)
-  Int rounded_memory_size = ceil((if (rounded_bam_size > 15) then 15 else rounded_bam_size) * memory_multiplier)
+  Int rounded_bam_size = ceil(size(input_bam, "GiB") + 0.5 + 10)
+  Int rounded_memory_size = ceil((if (rounded_bam_size > 25) then 25 else rounded_bam_size) * memory_multiplier)
   Int memory_size = if rounded_memory_size < 7 then 7 else rounded_memory_size
   Int java_memory_size = (memory_size - 1) * 1000
 
